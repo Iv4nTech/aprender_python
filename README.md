@@ -10,6 +10,8 @@ Una colección de proyectos prácticos para dominar Python paso a paso, **ordena
 
 ### 1 · Tuplas
 
+<img src="./miniaturas/tuplas.jpg" alt="Tuplas en Python" width="480">
+
 Las tuplas son colecciones **ordenadas e inmutables**: una vez creadas, no cambian. Son perfectas para representar datos que no deberían modificarse (coordenadas, fechas, registros) y, al ser inmutables, son más rápidas y seguras que las listas. Tu primer paso para entender cómo Python organiza la información.
 
 📂 [`1 - Tuplas`](./1%20-%20Tuplas)
