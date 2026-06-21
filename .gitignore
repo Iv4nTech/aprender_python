@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.venv/
+venv/
+env/
+.env
+
+# Editores / IDE
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+
+# Archivos generados por ejercicios (Context Managers)
+*.db
+*.log
+*.cfg
+config.json
