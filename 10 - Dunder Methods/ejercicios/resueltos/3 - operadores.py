@@ -29,7 +29,12 @@ class Vector2D():
     def __mul__(self, other):
         return Vector2D(self.x * other, self.y * other)
     
+
+
+
+
+    
 print(Vector2D(4, 5) + Vector2D(4,3))
-print(Vector2D(4, 5) * 2)
+print(Vector2D(4, 5) * 10)
 
 

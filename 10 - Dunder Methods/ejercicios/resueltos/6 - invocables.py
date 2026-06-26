@@ -21,7 +21,7 @@ class CrearImpuesto():
     def __init__(self, tasa):
         self.tasa = tasa
 
-    def __call__(self, precio ,*args, **kwds):
+    def __call__(self, precio ,*args, **kws):
         return precio * (1 + self.tasa)
 
 class Carrito():

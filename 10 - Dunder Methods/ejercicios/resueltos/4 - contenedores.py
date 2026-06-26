@@ -32,6 +32,7 @@ class Playlist():
     def __contains__(self, item):
         return item in self.lista
 
+
 p = Playlist()
 print(len(p))
 print(p[1])

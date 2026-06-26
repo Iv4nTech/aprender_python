@@ -33,8 +33,9 @@ class Producto():
     def __format__(self, format_spec):
         if format_spec == "iva":
             return f"{self.precio * 1.21:.2f}€"
-        return f'{self.nombre} - {self.precio}€'
+        return self.__str__()
 
 print(Producto("Raqueta Padel", 80))
 print(repr(Producto("Raqueta Padel", 80)))
 print(f"{Producto("Raqueta Padel", 80):iva}")
+print(f"{Producto("Raqueta Padel", 80):hola}")
