@@ -108,6 +108,26 @@ Los **métodos mágicos** (o *dunder methods*, por el doble guion bajo en `__met
 
 ---
 
+### 11 · Closures
+
+<img src="./miniaturas/closures.jpg" alt="Closures en Python" width="480">
+
+Una función que se lleva una **"mochila"** con las variables del lugar donde nació y las recuerda para siempre, aunque ese lugar ya no exista. Los **closures** te permiten fabricar funciones a medida, mantener estado sin usar clases y entender de una vez la regla LEGB. Son, además, la base directa sobre la que se construyen los decoradores.
+
+📂 [`11 - Closures`](./11%20-%20Closures)
+
+---
+
+### 12 · Async / Await
+
+<img src="./miniaturas/async-await.jpg" alt="Async y Await en Python" width="480">
+
+¿Y si, mientras tu programa **espera** una descarga o una consulta a la base de datos, pudiera ir avanzando otras diez tareas? Con `async`/`await` escribes código **concurrente** con un solo hilo: descargas que pasan de 5 segundos a 1, colas de trabajo con varios *workers* y control fino con `TaskGroup`, `Semaphore` y `timeout`. El salto que separa a un script que espera de uno que rinde.
+
+📂 [`12 - Async Await`](./12%20-%20Async%20Await)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
