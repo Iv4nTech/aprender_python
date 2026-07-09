@@ -120,11 +120,27 @@ Una función que se lleva una **"mochila"** con las variables del lugar donde na
 
 ### 12 · Async / Await
 
-<img src="./miniaturas/async-await.jpg" alt="Async y Await en Python" width="480">
+<img src="./miniaturas/asyncawait.jpg" alt="Async y Await en Python" width="480">
 
 ¿Y si, mientras tu programa **espera** una descarga o una consulta a la base de datos, pudiera ir avanzando otras diez tareas? Con `async`/`await` escribes código **concurrente** con un solo hilo: descargas que pasan de 5 segundos a 1, colas de trabajo con varios *workers* y control fino con `TaskGroup`, `Semaphore` y `timeout`. El salto que separa a un script que espera de uno que rinde.
 
 📂 [`12 - Async Await`](./12%20-%20Async%20Await)
+
+---
+
+### 13 · Dataclasses
+
+Escribir `__init__`, `__repr__` y `__eq__` a mano en cada clase que solo guarda datos es puro boilerplate mecánico. El decorador `@dataclass` lo genera por ti a partir de las anotaciones de tipo: valores por defecto seguros con `field()`, atributos de clase con `ClassVar`, validaciones en `__post_init__`, instancias inmutables y *hashables* con `frozen=True`, comparación y orden con `order=True`, copias con `replace()` y conversión a dict con `asdict()`. La forma moderna y segura de modelar datos en Python.
+
+📂 [`13 - Dataclasses`](./13%20-%20Dataclasses)
+
+---
+
+### 14 · Slots
+
+Cada instancia normal carga con su propio `__dict__`, aunque todos los objetos de la clase tengan siempre los mismos campos: memoria desperdiciada a gran escala. `__slots__` le dice a Python qué atributos existen de antemano y elimina ese diccionario por instancia, ahorrando memoria y detectando al vuelo los errores tipográficos (`AttributeError` en vez de un atributo fantasma). Aprenderás la herencia correcta e incorrecta con slots, el modo híbrido con `__dict__` y a medir el ahorro real con `sys.getsizeof` y `timeit`.
+
+📂 [`14 - Slots`](./14%20-%20Slots)
 
 ---
 
