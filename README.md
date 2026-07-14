@@ -130,6 +130,8 @@ Una función que se lleva una **"mochila"** con las variables del lugar donde na
 
 ### 13 · Dataclasses
 
+<img src="./miniaturas/dataclass2.jpg" alt="Dataclasses en Python" width="480">
+
 Escribir `__init__`, `__repr__` y `__eq__` a mano en cada clase que solo guarda datos es puro boilerplate mecánico. El decorador `@dataclass` lo genera por ti a partir de las anotaciones de tipo: valores por defecto seguros con `field()`, atributos de clase con `ClassVar`, validaciones en `__post_init__`, instancias inmutables y *hashables* con `frozen=True`, comparación y orden con `order=True`, copias con `replace()` y conversión a dict con `asdict()`. La forma moderna y segura de modelar datos en Python.
 
 📂 [`13 - Dataclasses`](./13%20-%20Dataclasses)
@@ -138,9 +140,21 @@ Escribir `__init__`, `__repr__` y `__eq__` a mano en cada clase que solo guarda 
 
 ### 14 · Slots
 
+<img src="./miniaturas/__slots__.jpg" alt="__slots__ en Python" width="480">
+
 Cada instancia normal carga con su propio `__dict__`, aunque todos los objetos de la clase tengan siempre los mismos campos: memoria desperdiciada a gran escala. `__slots__` le dice a Python qué atributos existen de antemano y elimina ese diccionario por instancia, ahorrando memoria y detectando al vuelo los errores tipográficos (`AttributeError` en vez de un atributo fantasma). Aprenderás la herencia correcta e incorrecta con slots, el modo híbrido con `__dict__` y a medir el ahorro real con `sys.getsizeof` y `timeit`.
 
 📂 [`14 - Slots`](./14%20-%20Slots)
+
+---
+
+### 15 · Descriptores
+
+<img src="./miniaturas/descriptores.jpg" alt="Descriptores en Python" width="480">
+
+`@property`, los atributos de las dataclasses y `__slots__` tienen algo en común por debajo: todos son **descriptores**. Un descriptor es cualquier objeto que define `__get__`, `__set__` o `__delete__` y que, colocado como atributo de clase, intercepta la lectura, escritura o borrado de ese atributo. Aprenderás la diferencia entre *data* y *non-data descriptors*, el papel de `__set_name__` y, sobre todo, por qué un descriptor reutilizable elimina la duplicación de validaciones que `@property` te obliga a copiar y pegar en cada atributo.
+
+📂 [`15 - Descriptores`](./15%20-%20Descriptores)
 
 ---
 
