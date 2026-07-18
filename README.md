@@ -158,6 +158,26 @@ Cada instancia normal carga con su propio `__dict__`, aunque todos los objetos d
 
 ---
 
+### 16 · ABC (Abstract Base Classes)
+
+<img src="./miniaturas/abc.jpg" alt="ABC (Abstract Base Classes) en Python" width="480">
+
+Un canal de notificaciones que "olvida" implementar `enviar()` y falla en silencio en producción; un conector de almacenamiento a medias que es un desastre el día que hay que restaurar un backup. Las **ABC** (clases base abstractas) obligan a cumplir un contrato en tiempo de creación de la instancia, no cuando ya es tarde. Aprenderás `@abstractmethod`, propiedades abstractas, `isinstance`/`issubclass` para validar contratos, `register()` para adoptar clases de terceros, las ABCs de `collections.abc` y el patrón Template Method. La diferencia entre un bug que revienta en producción y uno que Python te impide escribir.
+
+📂 [`16 - ABC (Abstract Base Classes)`](./16%20-%20ABC%20%28Abstract%20Base%20Classes%29)
+
+---
+
+### 17 · Excepciones Personalizadas
+
+<img src="./miniaturas/excepciones-personalizadas.jpg" alt="Excepciones Personalizadas en Python" width="480">
+
+Un `except Exception` sin relanzar que hace que un pedido fallido se procese "como si nada"; un error de bajo nivel de la base de datos que se filtra tal cual hasta el usuario. Las **excepciones personalizadas** convierten fallos genéricos en errores con nombre, jerarquía y datos propios. Aprenderás a diseñar tu propia jerarquía de errores, `raise ... from ...` para encadenar sin perder contexto, el flujo completo `try/except/else/finally`, cuándo hacer *re-raise* y cuándo no capturar, `add_note()` para enriquecer errores ya lanzados, y `ExceptionGroup`/`except*` para reportar varios fallos a la vez. La base de un manejo de errores que no oculta bugs.
+
+📂 [`17 - Excepciones Personalizadas`](./17%20-%20Excepciones%20Personalizadas)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
