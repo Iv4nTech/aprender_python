@@ -178,6 +178,16 @@ Un `except Exception` sin relanzar que hace que un pedido fallido se procese "co
 
 ---
 
+### 18 · JSON
+
+<img src="./miniaturas/json.jpg" alt="JSON en Python" width="480">
+
+Una config guardada como texto plano casero que se rompe en cuanto otro servicio necesita leerla; una respuesta de una API externa mal formada que tumba la app si nadie la controla. El módulo **json** es el formato estándar que cualquier lenguaje sabe leer y escribir. Aprenderás `dumps`/`loads` frente a `dump`/`load`, la tabla de conversión de tipos Python ↔ JSON, `JSONDecodeError` para blindarte ante datos externos corruptos, `default=` para serializar `datetime`/`Decimal`/objetos propios, `object_hook=` para reconstruirlos al deserializar, y las opciones de formato (`indent`, `ensure_ascii`, `separators`) según guardes en disco, envíes por red o depures en consola. La diferencia entre una config que solo tu script entiende y una que habla el mismo idioma que el resto del sistema.
+
+📂 [`18 - JSON`](./18%20-%20JSON)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
