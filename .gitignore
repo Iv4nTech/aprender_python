@@ -30,3 +30,4 @@ datos_limpios.json
 # Contenido de Claude Code: se queda siempre en local, nunca se commitea
 .claude/
 shorts/
+CLAUDE.md
