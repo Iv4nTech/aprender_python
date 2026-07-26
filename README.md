@@ -188,6 +188,16 @@ Una config guardada como texto plano casero que se rompe en cuanto otro servicio
 
 ---
 
+### 19 · Threading
+
+<img src="./miniaturas/threading.jpg" alt="Threading en Python" width="480">
+
+Una herramienta de monitorización que comprueba 5 servicios en serie y tarda la suma de todas las esperas; un contador compartido que da un resultado distinto cada vez que lo ejecutas. El módulo **threading** permite lanzar tareas de I/O en paralelo con `Thread`, `start()` y `join()`. Aprenderás hilos como subclase con estado propio, *daemon threads* que no bloquean el cierre, la *race condition* del contador compartido y cómo `Lock` la resuelve, `RLock` para métodos reentrantes, `Event` para sincronizar productor/consumidor, `Semaphore` para limitar concurrencia (un pool de conexiones), `threading.local` para datos privados por hilo, y por qué el GIL hace que `threading` brille en I/O-bound pero no sirva de nada en CPU-bound (ahí toca `multiprocessing`). La diferencia entre un programa que espera y uno que aprovecha cada segundo de espera de red.
+
+📂 [`19 - Threading`](./19%20-%20Threading)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
