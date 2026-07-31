@@ -198,6 +198,16 @@ Una herramienta de monitorización que comprueba 5 servicios en serie y tarda la
 
 ---
 
+### 20 · Multiprocessing
+
+<img src="./miniaturas/multiprocessing.jpg" alt="Multiprocessing en Python" width="480">
+
+Contar primos repartido en varios hilos tarda exactamente lo mismo que en uno solo: el GIL no lo permite. El módulo **multiprocessing** lanza procesos del sistema operativo de verdad, cada uno con su propio intérprete y su propio GIL, para conseguir paralelismo real en tareas que calculan. Aprenderás `Process`, `start()`/`join()` y por qué cada proceso tiene su propia memoria; los tres métodos de arranque `fork`/`spawn`/`forkserver` y por qué Linux pasa a `forkserver` por defecto en Python 3.14; `Pool` y `ProcessPoolExecutor` (con las novedades 3.14 `terminate_workers()`, `kill_workers()` y `buffersize`); `Queue` y `Pipe` para comunicar procesos que no comparten memoria; `Value`/`Array` con `.get_lock()` para memoria compartida sin race conditions; `Manager` para `dict`/`list`/`set` compartidos (incluido el nuevo `SyncManager.set()`); y `Lock`/`Event`/`Semaphore` entre procesos. La continuación natural de `threading`: cuándo el código espera y cuándo el código calcula.
+
+📂 [`20 - Multiprocessing`](./20%20-%20Multiprocessing)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
