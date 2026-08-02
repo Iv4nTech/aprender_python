@@ -208,6 +208,16 @@ Contar primos repartido en varios hilos tarda exactamente lo mismo que en uno so
 
 ---
 
+### 21 · Functools
+
+<img src="./miniaturas/functools.jpg" alt="Functools en Python" width="480">
+
+Tres endpoints de una API de pagos repitiendo la misma `base_url` y los mismos `headers` en cada llamada; un decorador de logging que hace desaparecer el `__name__` de la función original; un sistema de precios que recalcula el mismo impuesto miles de veces al día. El módulo **functools** resuelve estos problemas con herramientas de orden superior. Aprenderás `partial` para congelar argumentos (y `Placeholder`, novedad 3.14, para fijar uno que no es el primero), `@lru_cache` y `@cache` para no repetir cálculos costosos con `.cache_info()`/`.cache_clear()`, `reduce` para plegar una secuencia en un valor (con `initial` ahora también como keyword, novedad 3.14), `@wraps` para que un decorador no mienta sobre la función que envuelve, y `cached_property` para calcular una vez por instancia y reutilizar. La diferencia entre código que repite trabajo y código que lo recuerda.
+
+📂 [`21 - Functools`](./21%20-%20Functools)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
