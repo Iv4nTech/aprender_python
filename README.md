@@ -218,6 +218,16 @@ Tres endpoints de una API de pagos repitiendo la misma `base_url` y los mismos `
 
 ---
 
+### 22 · Collections
+
+<img src="./miniaturas/collections.jpg" alt="Collections en Python" width="480">
+
+Un dict que revienta con `KeyError` la primera vez que llega una URL nueva en los logs de un servidor; un `insert(0, ...)` en una cola de tareas que se vuelve más lento cuanto más crece; una tupla de base de datos donde nadie recuerda si el índice 2 es el email o el teléfono. El módulo **collections** trae estructuras especializadas para estos problemas de cada día. Aprenderás `Counter` para contar de una sola línea (con `most_common()`, `total()` desde 3.10, aritmética `+`/`-`/`&`/`|` y comparaciones ricas también desde 3.10), `defaultdict` para agrupar sin comprobar si la clave existe (y la trampa de que `d[clave]` la crea sola, a diferencia de `in` o `.get()`), `namedtuple` para tuplas con campos con nombre (`_make`, `_replace` —que lanza `TypeError` desde 3.13—, `_asdict`, `_fields` y el parámetro `defaults` desde 3.7), y `deque` para colas O(1) por ambos extremos con `maxlen` para ventanas deslizantes. La diferencia entre código defensivo a base de `if` repetidos y código que usa la estructura de datos correcta desde el principio.
+
+📂 [`22 - Collections`](./22%20-%20Collections)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
