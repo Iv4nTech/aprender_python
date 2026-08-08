@@ -228,6 +228,16 @@ Un dict que revienta con `KeyError` la primera vez que llega una URL nueva en lo
 
 ---
 
+### 23 · Type Hints
+
+<img src="./miniaturas/type_hints.jpg" alt="Type Hints en Python" width="480">
+
+Un `precio - porcentaje` que revienta con `TypeError` solo cuando alguien llama a la función con un string, ya en producción; una API que devuelve `None` y nadie lo comprobó antes de acceder a un campo. Los **type hints** son un contrato que un type checker revisa antes de ejecutar nada, no decoración. Aprenderás la sintaxis moderna `X | Y` y `X | None` (3.10) frente a `Union`/`Optional`, tipos compuestos (`list[str]`, `dict[str, int]`), `Callable` y `Sequence` para funciones y colecciones ABC, `Literal` y `Final` para valores exactos y constantes, `TypedDict` para diccionarios con forma garantizada, `Protocol` para duck typing con contrato explícito, los genéricos con la sintaxis PEP 695 (`def func[T]`, `class Box[T]`, `type Alias = ...`, sin `TypeVar`), `@overload` para funciones con varias firmas, y la gran novedad de 3.14 (PEP 649): anotaciones diferidas que permiten forward references directas sin comillas. La diferencia entre un bug que aparece en producción y uno que una herramienta te señala antes de hacer commit.
+
+📂 [`23 - Type Hints`](./23%20-%20Type%20Hints)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
