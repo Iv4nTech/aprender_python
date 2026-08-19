@@ -238,6 +238,16 @@ Un `precio - porcentaje` que revienta con `TypeError` solo cuando alguien llama 
 
 ---
 
+### 24 · Variables y Tipos de Datos
+
+<img src="./miniaturas/variables-tipos-datos.jpg" alt="Variables y Tipos de Datos en Python" width="480">
+
+Una edad guardada como texto que revienta en cuanto alguien intenta sumarle un año; un `dict["clave"]` que tumba la app la primera vez que esa clave no existe; un `0.1 + 0.2` que no da `0.3` y deja a cualquiera desconcertado la primera vez. Las **variables y tipos de datos** son la base sobre la que se sostiene todo lo demás: en Python la variable no tiene tipo, el objeto al que apunta sí. Aprenderás cómo funciona la asignación y la reasignación dinámica, los tipos numéricos (`int` de precisión arbitraria, `float` en coma flotante IEEE 754, con las novedades 3.10-3.14 `bit_count()` y `from_number()`), por qué `bool` es subclase de `int`, la inmutabilidad de `str` y sus métodos más útiles (incluidos `removeprefix`/`removesuffix` de 3.9+), `list` frente a `dict` con la trampa del `KeyError` que `.get()` evita, un vistazo rápido a `tuple` y `set`, `None` y por qué se compara con `is` y no con `==`, y el casting seguro entre tipos con `isinstance()`. La diferencia entre un bug de tipos que aparece el primer día en producción y una base sólida que lo evita desde la primera línea.
+
+📂 [`24 - Variables y Tipos de Datos`](./24%20-%20Variables%20y%20Tipos%20de%20Datos)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
