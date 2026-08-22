@@ -248,6 +248,16 @@ Una edad guardada como texto que revienta en cuanto alguien intenta sumarle un a
 
 ---
 
+### 25 · Condicionales
+
+<img src="./miniaturas/condicionales.jpg" alt="Condicionales en Python" width="480">
+
+Un sistema de pedidos que confirma todo sin comprobar el stock deja el almacén en negativo el primer día de rebajas; un `if` anidado dentro de otro `if` dentro de otro que nadie se atreve a tocar. Los **condicionales** son la forma en que un programa deja de repetir siempre el mismo camino y empieza a decidir según los datos que recibe. Aprenderás `if`/`elif`/`else` y la trampa del orden cuando la condición más amplia va primero, los operadores de comparación y lógicos (`==`, `in`, `and`, `or`, `not`) aplicados sobre casos reales de e-commerce, los valores truthy y falsy y la diferencia entre `if lista:` y `if lista is not None:`, la expresión ternaria para asignaciones de una línea sin sacrificar legibilidad, las cláusulas de guarda (*early return*) para aplanar el anidamiento, y `match`/`case` (desde 3.10) con destructuring de diccionarios como alternativa moderna a una cadena larga de `elif`. La diferencia entre un programa que siempre hace lo mismo y uno que responde a lo que de verdad está pasando.
+
+📂 [`25 - Condicionales`](./25%20-%20Condicionales)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
