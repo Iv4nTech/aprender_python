@@ -258,6 +258,16 @@ Un sistema de pedidos que confirma todo sin comprobar el stock deja el almacén 
 
 ---
 
+### 26 · Bucles FOR y WHILE
+
+<img src="./miniaturas/bucles-for-while.jpg" alt="Bucles FOR y WHILE en Python" width="480">
+
+Un `for i in range(len(lista)): lista[i]` que delata a quien viene de otro lenguaje; un bucle que nunca termina porque la condición del `while` nunca cambia; una búsqueda que sigue mirando elementos después de haber encontrado ya lo que buscaba. Los **bucles** son cómo un programa repite trabajo sin copiar y pegar código, y Python tiene sus propias reglas para hacerlo bien. Aprenderás el `for` idiomático que itera directamente sobre los elementos (no sobre índices), `range()` como iterable perezoso para repetir N veces o generar reintentos, `break` y `continue` para cortar o saltar iteraciones sobre casos reales de facturas y usuarios, la cláusula `else` de los bucles —la característica más malentendida de Python, que se ejecuta solo si no hubo `break`—, el `while` para cuando no sabes de antemano cuántas vueltas hará falta, el patrón `while True` + `break` como sustituto del `do-while` que Python no tiene, y los bucles anidados con su coste real en O(n²) y por qué un `break` interno no rompe el bucle externo. La diferencia entre un bucle que se cuelga en producción y uno que sabes exactamente cuándo y por qué termina.
+
+📂 [`26 - Bucles FOR y WHILE`](./26%20-%20Bucles%20FOR%20y%20WHILE)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
