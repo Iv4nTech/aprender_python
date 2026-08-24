@@ -18,11 +18,11 @@ def seccion(titulo: str) -> None:
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 1 — FÁCIL — for básico sobre lista")
 
-precios = [12.5, 8.0, 23.99, 5.5, 17.0]
+temperaturas = [21.5, 19.0, 25.3, 30.1, 18.4]
 
 # SOLUCIÓN
-for precio in precios:
-    print(f"Precio: {precio}€")
+for temperatura in temperaturas:
+    print(f"Temperatura: {temperatura}°C")
 
 
 # ──────────────────────────────────────────────
@@ -32,8 +32,8 @@ for precio in precios:
 seccion("EJERCICIO 2 — FÁCIL — range() con paso")
 
 # SOLUCIÓN
-for numero in range(0, 21, 2):
-    print(numero)
+for anio in range(2000, 2031, 4):
+    print(anio)
 
 
 # ──────────────────────────────────────────────
@@ -56,13 +56,19 @@ print("Despegue!")
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 4 — MEDIO — continue para filtrar")
 
-transacciones = [150, -30, 200, -50, 80, -10, 300]
+comentarios = [
+    {"autor": "usuario1", "texto": "Buen artículo, gracias", "spam": False},
+    {"autor": "bot99", "texto": "Compra seguidores aquí -> link", "spam": True},
+    {"autor": "usuario2", "texto": "Muy claro, lo he entendido", "spam": False},
+    {"autor": "bot42", "texto": "Gana dinero rápido, escríbeme", "spam": True},
+    {"autor": "usuario3", "texto": "Justo lo que buscaba", "spam": False},
+]
 
 # SOLUCIÓN
-for movimiento in transacciones:
-    if movimiento < 0:
+for comentario in comentarios:
+    if comentario["spam"]:
         continue
-    print(movimiento)
+    print(comentario["texto"])
 
 
 # ──────────────────────────────────────────────
@@ -71,12 +77,17 @@ for movimiento in transacciones:
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 5 — MEDIO — break para búsqueda")
 
-emails = ["user@gmail.com", "admin@empresa.com", "info@empresa.com", "soporte@empresa.com"]
+plazas_parking = [
+    {"numero": 1, "libre": False},
+    {"numero": 2, "libre": False},
+    {"numero": 3, "libre": True},
+    {"numero": 4, "libre": True},
+]
 
 # SOLUCIÓN
-for email in emails:
-    if email.endswith("@empresa.com"):
-        print(email)
+for plaza in plazas_parking:
+    if plaza["libre"]:
+        print(f"Plaza libre encontrada: número {plaza['numero']}")
         break
 
 
@@ -86,21 +97,21 @@ for email in emails:
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 6 — MEDIO — else en bucle for")
 
-productos_en_stock = ["camiseta", "pantalon", "zapatillas"]
+despensa = ["harina", "huevos", "leche", "mantequilla"]
 
 
-def buscar(nombre: str) -> None:
+def comprobar_ingrediente(nombre: str) -> None:
     # SOLUCIÓN
-    for producto in productos_en_stock:
-        if producto == nombre:
-            print(f"'{nombre}' encontrado")
+    for ingrediente in despensa:
+        if ingrediente == nombre:
+            print(f"'{nombre}' ya está en la despensa")
             break
     else:
-        print("Producto no disponible")
+        print(f"Falta comprar: {nombre}")
 
 
-buscar("chaqueta")
-buscar("camiseta")
+comprobar_ingrediente("azucar")
+comprobar_ingrediente("huevos")
 
 
 # ──────────────────────────────────────────────
@@ -109,20 +120,17 @@ buscar("camiseta")
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 7 — MEDIO — while con condición real")
 
-usuario_correcto = "admin"
-clave_correcta = "1234"
-intentos_login = [("admin", "wrong"), ("user", "1234"), ("admin", "1234")]
+estado_impresoras = ["ocupada", "ocupada", "libre"]
 
 # SOLUCIÓN
 indice = 0
-acceso = False
-while indice < len(intentos_login) and not acceso:
-    usuario, clave = intentos_login[indice]
-    if usuario == usuario_correcto and clave == clave_correcta:
-        acceso = True
-        print("Acceso concedido")
+impresion_iniciada = False
+while indice < len(estado_impresoras) and not impresion_iniciada:
+    if estado_impresoras[indice] == "libre":
+        print("Impresión iniciada")
+        impresion_iniciada = True
     else:
-        print("Credenciales incorrectas")
+        print("Impresora ocupada, reintentando...")
     indice += 1
 
 
@@ -132,8 +140,8 @@ while indice < len(intentos_login) and not acceso:
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 8 — AVANZADO — while True + break (menú)")
 
-opciones_menu = ["1. Ver pedidos", "2. Crear pedido", "3. Salir"]
-entradas = ["1", "2", "5", "3"]
+opciones_cajero = ["1. Consultar saldo", "2. Retirar efectivo", "3. Cambiar PIN", "4. Salir"]
+entradas = ["1", "9", "2", "4"]
 
 # SOLUCIÓN
 indice_entrada = 0
@@ -141,11 +149,11 @@ while True:
     eleccion = entradas[indice_entrada]
     indice_entrada += 1
 
-    if eleccion == "3":
-        print("Hasta luego")
+    if eleccion == "4":
+        print("Sesión finalizada")
         break
-    elif eleccion in ("1", "2"):
-        print("Ejecutando:", opciones_menu[int(eleccion) - 1])
+    elif eleccion in ("1", "2", "3"):
+        print("Ejecutando:", opciones_cajero[int(eleccion) - 1])
     else:
         print("Opción no válida")
 
@@ -173,31 +181,31 @@ for fila_idx, fila in enumerate(sensores):
 
 # ──────────────────────────────────────────────
 # EJERCICIO 10 — EXPERTO
-# Combinar todo: validación + búsqueda + else
+# Combinar todo: filtrado + conteo + búsqueda + else
 # ──────────────────────────────────────────────
-seccion("EJERCICIO 10 — EXPERTO — Combinar todo: validación + búsqueda + else")
+seccion("EJERCICIO 10 — EXPERTO — Combinar todo: filtrado + conteo + búsqueda + else")
 
-pedidos = [
-    {"id": 1, "estado": "enviado", "importe": 45.0},
-    {"id": 2, "estado": "pendiente", "importe": 120.5},
-    {"id": 3, "estado": "cancelado", "importe": 30.0},
-    {"id": 4, "estado": "pendiente", "importe": 89.9},
-    {"id": 5, "estado": "enviado", "importe": 200.0},
+tickets_soporte = [
+    {"id": 201, "estado": "cerrado", "prioridad": "baja"},
+    {"id": 202, "estado": "abierto", "prioridad": "alta"},
+    {"id": 203, "estado": "abierto", "prioridad": "media"},
+    {"id": 204, "estado": "escalado", "prioridad": "alta"},
+    {"id": 205, "estado": "abierto", "prioridad": "alta"},
 ]
 
 # SOLUCIÓN
-total_pendiente = 0.0
-for pedido in pedidos:
-    if pedido["estado"] != "pendiente":
+total_abiertos = 0
+for ticket in tickets_soporte:
+    if ticket["estado"] != "abierto":
         continue
-    print(pedido["importe"])
-    total_pendiente += pedido["importe"]
+    print(ticket["id"])
+    total_abiertos += 1
 
-print(f"Total pendiente: {total_pendiente}")
+print(f"Total tickets abiertos: {total_abiertos}")
 
-for pedido in pedidos:
-    if pedido["estado"] == "pendiente" and pedido["importe"] > 100:
-        print(f"Pedido prioritario encontrado: ID {pedido['id']}")
+for ticket in tickets_soporte:
+    if ticket["estado"] == "abierto" and ticket["prioridad"] == "alta":
+        print(f"Ticket crítico encontrado: ID {ticket['id']}")
         break
 else:
-    print("Ningún pedido supera el umbral prioritario")
+    print("Ningún ticket abierto es de prioridad alta")

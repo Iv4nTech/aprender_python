@@ -21,17 +21,17 @@ def seccion(titulo: str) -> None:
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 1 — FÁCIL — for básico sobre lista")
 
-precios = [12.5, 8.0, 23.99, 5.5, 17.0]
+temperaturas = [21.5, 19.0, 25.3, 30.1, 18.4]
 
-# Imprime cada precio con el formato "Precio: X€"
+# Imprime cada temperatura con el formato "Temperatura: X°C"
 ...
 
 # Resultado esperado:
-# Precio: 12.5€
-# Precio: 8.0€
-# Precio: 23.99€
-# Precio: 5.5€
-# Precio: 17.0€
+# Temperatura: 21.5°C
+# Temperatura: 19.0°C
+# Temperatura: 25.3°C
+# Temperatura: 30.1°C
+# Temperatura: 18.4°C
 
 
 # ──────────────────────────────────────────────
@@ -40,10 +40,11 @@ precios = [12.5, 8.0, 23.99, 5.5, 17.0]
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 2 — FÁCIL — range() con paso")
 
-# Usando range(), imprime todos los números pares del 0 al 20 inclusive
+# Usando range(), imprime los años bisiestos entre 2000 y 2030 (ambos
+# límites incluidos si corresponde), es decir, los múltiplos de 4.
 ...
 
-# Resultado esperado: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 (uno por línea)
+# Resultado esperado: 2000, 2004, 2008, 2012, 2016, 2020, 2024, 2028 (uno por línea)
 
 
 # ──────────────────────────────────────────────
@@ -65,13 +66,22 @@ seccion("EJERCICIO 3 — FÁCIL — while con contador")
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 4 — MEDIO — continue para filtrar")
 
-transacciones = [150, -30, 200, -50, 80, -10, 300]
+comentarios = [
+    {"autor": "usuario1", "texto": "Buen artículo, gracias", "spam": False},
+    {"autor": "bot99", "texto": "Compra seguidores aquí -> link", "spam": True},
+    {"autor": "usuario2", "texto": "Muy claro, lo he entendido", "spam": False},
+    {"autor": "bot42", "texto": "Gana dinero rápido, escríbeme", "spam": True},
+    {"autor": "usuario3", "texto": "Justo lo que buscaba", "spam": False},
+]
 
-# Imprime solo las transacciones positivas (ingresos), usando continue
-# para saltar los negativos.
+# Imprime el texto de los comentarios que NO son spam, usando continue
+# para saltar los marcados como spam.
 ...
 
-# Resultado esperado: 150, 200, 80, 300 (uno por línea)
+# Resultado esperado:
+# Buen artículo, gracias
+# Muy claro, lo he entendido
+# Justo lo que buscaba
 
 
 # ──────────────────────────────────────────────
@@ -80,13 +90,18 @@ transacciones = [150, -30, 200, -50, 80, -10, 300]
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 5 — MEDIO — break para búsqueda")
 
-emails = ["user@gmail.com", "admin@empresa.com", "info@empresa.com", "soporte@empresa.com"]
+plazas_parking = [
+    {"numero": 1, "libre": False},
+    {"numero": 2, "libre": False},
+    {"numero": 3, "libre": True},
+    {"numero": 4, "libre": True},
+]
 
-# Encuentra e imprime el primer email del dominio @empresa.com y para
-# la búsqueda con break.
+# Encuentra e imprime "Plaza libre encontrada: número X" para la primera
+# plaza libre, y para la búsqueda con break.
 ...
 
-# Resultado esperado: admin@empresa.com
+# Resultado esperado: Plaza libre encontrada: número 3
 
 
 # ──────────────────────────────────────────────
@@ -95,19 +110,19 @@ emails = ["user@gmail.com", "admin@empresa.com", "info@empresa.com", "soporte@em
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 6 — MEDIO — else en bucle for")
 
-productos_en_stock = ["camiseta", "pantalon", "zapatillas"]
+despensa = ["harina", "huevos", "leche", "mantequilla"]
 
 
-def buscar(nombre: str) -> None:
-    # Busca "nombre" con un for. Si no se encuentra, el bloque else debe
-    # imprimir "Producto no disponible".
+def comprobar_ingrediente(nombre: str) -> None:
+    # Busca "nombre" en la despensa con un for. Si no se encuentra, el
+    # bloque else debe imprimir "Falta comprar: <nombre>".
     ...
 
 
-# Pruébalo buscando "chaqueta" (no está) y "camiseta" (sí está) para ver
-# que el else no se ejecuta cuando hay break.
-# buscar("chaqueta")
-# buscar("camiseta")
+# Pruébalo con "azucar" (no está) y "huevos" (sí está) para ver que el
+# else no se ejecuta cuando hay break.
+# comprobar_ingrediente("azucar")
+# comprobar_ingrediente("huevos")
 
 
 # ──────────────────────────────────────────────
@@ -116,19 +131,18 @@ def buscar(nombre: str) -> None:
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 7 — MEDIO — while con condición real")
 
-usuario_correcto = "admin"
-clave_correcta = "1234"
-intentos_login = [("admin", "wrong"), ("user", "1234"), ("admin", "1234")]
+estado_impresoras = ["ocupada", "ocupada", "libre"]
 
-# Itera sobre intentos_login con while o for simulando los intentos.
-# Imprime "Acceso concedido" o "Credenciales incorrectas" según cada
-# intento, y para al primer acceso correcto.
+# Recorre estado_impresoras con while: mientras la impresora esté
+# "ocupada", imprime "Impresora ocupada, reintentando..." y prueba con
+# la siguiente. En cuanto encuentres una "libre", imprime
+# "Impresión iniciada" y para.
 ...
 
 # Resultado esperado:
-# Credenciales incorrectas
-# Credenciales incorrectas
-# Acceso concedido
+# Impresora ocupada, reintentando...
+# Impresora ocupada, reintentando...
+# Impresión iniciada
 
 
 # ──────────────────────────────────────────────
@@ -137,20 +151,20 @@ intentos_login = [("admin", "wrong"), ("user", "1234"), ("admin", "1234")]
 # ──────────────────────────────────────────────
 seccion("EJERCICIO 8 — AVANZADO — while True + break (menú)")
 
-opciones_menu = ["1. Ver pedidos", "2. Crear pedido", "3. Salir"]
-entradas = ["1", "2", "5", "3"]
+opciones_cajero = ["1. Consultar saldo", "2. Retirar efectivo", "3. Cambiar PIN", "4. Salir"]
+entradas = ["1", "9", "2", "4"]
 
 # Usa while True para mostrar el menú y "pedir" cada entrada de la lista
-# entradas (una por vuelta, en orden). Si la entrada es "3", imprime
-# "Hasta luego" y sal del bucle. Para "1" o "2", imprime
+# entradas (una por vuelta, en orden). Si la entrada es "4", imprime
+# "Sesión finalizada" y sal del bucle. Para "1", "2" o "3", imprime
 # "Ejecutando: <opción>". Para cualquier otra, imprime "Opción no válida".
 ...
 
 # Resultado esperado:
-# Ejecutando: 1. Ver pedidos
-# Ejecutando: 2. Crear pedido
+# Ejecutando: 1. Consultar saldo
 # Opción no válida
-# Hasta luego
+# Ejecutando: 2. Retirar efectivo
+# Sesión finalizada
 
 
 # ──────────────────────────────────────────────
@@ -176,29 +190,29 @@ umbral = 80
 
 # ──────────────────────────────────────────────
 # EJERCICIO 10 — EXPERTO
-# Combinar todo: validación + búsqueda + else
+# Combinar todo: filtrado + conteo + búsqueda + else
 # ──────────────────────────────────────────────
-seccion("EJERCICIO 10 — EXPERTO — Combinar todo: validación + búsqueda + else")
+seccion("EJERCICIO 10 — EXPERTO — Combinar todo: filtrado + conteo + búsqueda + else")
 
-pedidos = [
-    {"id": 1, "estado": "enviado", "importe": 45.0},
-    {"id": 2, "estado": "pendiente", "importe": 120.5},
-    {"id": 3, "estado": "cancelado", "importe": 30.0},
-    {"id": 4, "estado": "pendiente", "importe": 89.9},
-    {"id": 5, "estado": "enviado", "importe": 200.0},
+tickets_soporte = [
+    {"id": 201, "estado": "cerrado", "prioridad": "baja"},
+    {"id": 202, "estado": "abierto", "prioridad": "alta"},
+    {"id": 203, "estado": "abierto", "prioridad": "media"},
+    {"id": 204, "estado": "escalado", "prioridad": "alta"},
+    {"id": 205, "estado": "abierto", "prioridad": "alta"},
 ]
 
-# 1) Imprime el importe de todos los pedidos en estado "pendiente"
+# 1) Imprime el id de todos los tickets en estado "abierto"
 #    (usa continue para saltar los demás)
-# 2) Calcula e imprime el importe total de pedidos pendientes
-# 3) Busca si existe algún pedido pendiente con importe superior a 100€;
-#    si lo hay, imprime "Pedido prioritario encontrado: ID X" y para;
-#    si no hay ninguno, el else debe imprimir
-#    "Ningún pedido supera el umbral prioritario"
+# 2) Cuenta e imprime cuántos tickets abiertos hay en total
+# 3) Busca si existe algún ticket abierto de prioridad "alta"; si lo hay,
+#    imprime "Ticket crítico encontrado: ID X" y para; si no hay ninguno,
+#    el else debe imprimir "Ningún ticket abierto es de prioridad alta"
 ...
 
 # Resultado esperado:
-# 120.5
-# 89.9
-# Total pendiente: 210.4
-# Pedido prioritario encontrado: ID 2
+# 202
+# 203
+# 205
+# Total tickets abiertos: 3
+# Ticket crítico encontrado: ID 202
