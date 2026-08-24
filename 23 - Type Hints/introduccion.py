@@ -101,7 +101,7 @@ seccion("3. Tipos compuestos: listas, diccionarios, tuplas")
 
 nombres: list[str] = ["Ana", "Luis", "Marta"]
 stock: dict[str, int] = {"teclado": 12, "raton": 30}
-coordenada: tuple[int, str, float, list[int]] = (1, "Madrid", 40.4, [1,2,3])  
+coordenada: tuple[int, str, float] = (1, "Madrid", 40.4)
 etiquetas: set[str] = {"oferta", "nuevo"}
 prohibidas: frozenset[int] = frozenset({403, 404, 500})
 
@@ -314,7 +314,6 @@ pila_enteros.push(2)
 print(f"  Pila[int]: pop() -> {pila_enteros.pop()}")
 
 type FilaDeID = list[int]
-
 
 ids_pedido: FilaDeID = [101, 102, 103]
 print(f"  type FilaDeID = list[int]: {ids_pedido}")

@@ -196,7 +196,7 @@ print(f"  _fields: {Empleado._fields}")
 # opcionales, útil cuando no todos los pedidos tienen descuento aplicado.
 Pedido = namedtuple("Pedido", ["id", "importe", "descuento"], defaults=[0.0])
 pedido_sin_descuento = Pedido(1, 100.0)
-pedido_con_descuento = Pedido(2, 100.0, 5.10)
+pedido_con_descuento = Pedido(2, 100.0, 15.0)
 print(f"\n  namedtuple con defaults: {pedido_sin_descuento}")
 print(f"  Sobrescribiendo el default: {pedido_con_descuento}")
 

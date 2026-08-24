@@ -31,8 +31,6 @@ for producto, cantidad in pedidos_entrantes:
     stock_almacen[producto] -= cantidad
     print(f"Pedido confirmado: {cantidad}x {producto}")
 
-    
-
 print("Estado final del almacén:", stock_almacen)
 # El almacén queda en negativo: se han "vendido" productos que no existían.
 # Esto es exactamente lo que un if evitaría: tomar un camino distinto
