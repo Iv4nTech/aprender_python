@@ -26,9 +26,11 @@ print("edad_usuario =", edad_usuario)
 print(type(edad_usuario))
 
 nombre, edad, activo = "Iván", 21, True
+
 print(nombre, edad, activo)
 
 errores = advertencias = avisos = 0
+
 print(errores, advertencias, avisos)
 
 
@@ -42,7 +44,7 @@ print("id_pedido =", id_pedido)
 
 factorial_50 = 1
 for n in range(1, 51):
-    factorial_50 *= n
+    factorial_50 *= n   
 print("50! =", factorial_50)
 
 precio_a = 0.1
@@ -50,7 +52,7 @@ precio_b = 0.2
 print(precio_a + precio_b)
 print(round(precio_a + precio_b, 2))
 
-unidades = 47
+unidades = 47 
 por_caja = 10
 cajas_completas = unidades // por_caja
 sobrantes = unidades % por_caja
@@ -63,7 +65,7 @@ print(permisos.bit_count())
 descuento = float.from_number(15)
 print(descuento)
 
-cantidad = int("3")
+cantidad = int("34444444441214124")
 precio_final = round(19.999, 2)
 print(cantidad)
 print(precio_final)
@@ -129,7 +131,7 @@ print(telefono[-9:])
 # ============================================================================
 seccion("5. Listas: list")
 
-carrito = ["teclado", "raton"]
+carrito = ["teclado", "raton"] 
 carrito.append("monitor")
 carrito.extend(["cable hdmi", "raton"])
 carrito.insert(0, "auriculares")
@@ -190,7 +192,7 @@ seccion("7. Mención rápida: tuple y set")
 coordenada_gps = (40.4, -3.7)
 print(coordenada_gps)
 
-permisos_usuario = {"leer", "escribir"}
+permisos_usuario = {"leer", "escribir", "escribir"}
 print(permisos_usuario)
 
 # Para profundizar, busca los vídeos dedicados a Tuplas y Sets en el canal.
