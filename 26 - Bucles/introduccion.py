@@ -191,28 +191,34 @@ for fila in range(1, 4):
         print(f"{fila} x {columna} = {fila * columna}", end="  ")
     print()
 
-# El coste real: dos bucles anidados sobre listas grandes son O(n**2).
-# Con 1000 clientes y 1000 productos, comparar cada cliente contra cada
-# producto son 1 000 000 de comparaciones, no 2 000.
-clientes = list(range(1000))
-productos = list(range(1000))
-print(f"Comparaciones en el peor caso: {len(clientes) * len(productos):,}")
+# Caso real: por cada cliente (bucle externo, "fila") revisar los productos
+# de su pedido (bucle interno, "columna") en busca de un artículo retirado
+# del mercado por seguridad.
+pedidos_por_cliente = {
+    "ana": ["taza", "camiseta", "auriculares-x200"],
+    "luis": ["zapatillas", "mochila"],
+    "eva": ["cargador", "auriculares-x200", "funda"],
+}
+productos_retirados = ["auriculares-x200"]
 
-sensores = [
-    [12, 45, 23, 11],
-    [34, 67, 89, 21],  # el 89 supera el umbral de 80
-    [5, 14, 33, 72],
-]
-umbral = 80
-
-# break en un bucle anidado solo rompe el bucle MÁS INTERNO: el externo
-# sigue revisando el resto de filas con total normalidad.
-for fila_idx, fila_sensores in enumerate(sensores):
-    for columna_idx, valor in enumerate(fila_sensores):
-        if valor > umbral:
-            print(f"Alerta en sensor fila {fila_idx}, columna {columna_idx}: valor {valor}")
+# break en un bucle anidado solo rompe el bucle MÁS INTERNO: en cuanto un
+# cliente tiene un producto retirado dejamos de mirar el resto de SUS
+# productos, pero el bucle externo sigue revisando a los demás clientes.
+for cliente, productos in pedidos_por_cliente.items():
+    for producto in productos:
+        if producto in productos_retirados:
+            print(f"Aviso para {cliente}: el producto '{producto}' ha sido retirado")
             break
-    print(f"Fila {fila_idx} revisada por completo")
+    print(f"{cliente}: revisión de su pedido completada")
+
+# El coste real de este patrón es O(clientes x productos_por_cliente). Con
+# tres clientes no se nota, pero con datos de producción crece muy rápido.
+n_clientes = 10_000
+productos_por_cliente = 20
+print(
+    f"Con {n_clientes:,} clientes y {productos_por_cliente} productos cada uno: "
+    f"{n_clientes * productos_por_cliente:,} comparaciones en el peor caso"
+)
 
 
 seccion("FIN — ya conoces los bucles FOR y WHILE al 100%")
