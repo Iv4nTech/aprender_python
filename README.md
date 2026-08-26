@@ -268,6 +268,14 @@ Un `for i in range(len(lista)): lista[i]` que delata a quien viene de otro lengu
 
 ---
 
+### 27 · Funciones
+
+El mismo cálculo de IVA copiado y pegado tres veces porque nadie lo metió en una función; un `global intentos` que acopla un contador a una variable externa y lo hace imposible de testear; una función a la que se le olvida el `return` y que devuelve `None` sin avisar. Las **funciones** son la unidad básica para dejar de repetir código y empezar a nombrar lo que un programa hace. Aprenderás `def`, parámetros y `return`, los valores por defecto y por qué van siempre después de los obligatorios, argumentos posicionales frente a keyword y cuándo estos últimos evitan bugs silenciosos, el return múltiple como tupla y la trampa de olvidarse el `return`, el scope local frente al global y por qué pasar y devolver valores es mejor que `global`, las funciones como first-class citizens que se pasan a `sorted(key=...)` sin llamarlas, y los docstrings que `help()` sabe leer. La diferencia entre un script que solo crece a base de copiar y pegar y uno construido con piezas que se pueden nombrar, probar y reutilizar.
+
+📂 [`27 - Funciones`](./27%20-%20Funciones)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
