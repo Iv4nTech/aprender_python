@@ -276,6 +276,14 @@ El mismo cálculo de IVA copiado y pegado tres veces porque nadie lo metió en u
 
 ---
 
+### 28 · Programación Orientada a Objetos (POO)
+
+Un usuario gestionado con tres variables sueltas (`nombre1`, `email1`, `saldo1`) que se vuelve inmanejable en cuanto hay que repetirlo para el segundo usuario; un atributo de clase mutable (`items = []`) que, sin querer, hace que dos carritos distintos compartan la misma lista; una función que va preguntando `if type(usuario) is UsuarioAdmin` y se olvida de actualizar el día que aparece un tipo nuevo; un rol de usuario que debería poder cambiar en caliente y que la herencia no permite tocar una vez creado el objeto. Las **clases** son el molde que agrupa datos y comportamiento en una sola unidad, la base de la programación orientada a objetos. Aprenderás `class` e `__init__`, qué es `self` de verdad (`u.metodo(x)` no es más que `Clase.metodo(u, x)`), la trampa del atributo de clase mutable frente al atributo de instancia inicializado en `__init__`, la herencia con `super()` para reutilizar y extender un `Usuario` en un `UsuarioAdmin`, `isinstance()` e `issubclass()` para validar tipos en tiempo de ejecución, la convención de atributos "privados" (`_nombre` y el name mangling real de `__nombre`) frente a la privacidad real que Python no tiene, **polimorfismo**: el mismo `str(objeto)` produciendo un resultado distinto según el tipo real, sin ramas de `if`/`isinstance`, más el *duck typing* que permite esto incluso entre clases sin ningún ancestro común, **composición frente a herencia** ("tiene un" frente a "es un") para cuando la relación entre objetos puede cambiar en tiempo de ejecución, y `@classmethod`/`@staticmethod` como constructores alternativos (`Factura.desde_fila_csv(...)`) y funciones auxiliares agrupadas en la clase. La diferencia entre datos sueltos que hay que arrastrar a mano por cada función y objetos que saben cómo comportarse.
+
+📂 [`28 - POO`](./28%20-%20POO)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
