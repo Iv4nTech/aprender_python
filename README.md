@@ -270,6 +270,8 @@ Un `for i in range(len(lista)): lista[i]` que delata a quien viene de otro lengu
 
 ### 27 · Funciones
 
+<img src="./miniaturas/funciones.jpg" alt="Funciones en Python" width="480">
+
 El mismo cálculo de IVA copiado y pegado tres veces porque nadie lo metió en una función; un `global intentos` que acopla un contador a una variable externa y lo hace imposible de testear; una función a la que se le olvida el `return` y que devuelve `None` sin avisar. Las **funciones** son la unidad básica para dejar de repetir código y empezar a nombrar lo que un programa hace. Aprenderás `def`, parámetros y `return`, los valores por defecto y por qué van siempre después de los obligatorios, argumentos posicionales frente a keyword y cuándo estos últimos evitan bugs silenciosos, el return múltiple como tupla y la trampa de olvidarse el `return`, el scope local frente al global y por qué pasar y devolver valores es mejor que `global`, las funciones como first-class citizens que se pasan a `sorted(key=...)` sin llamarlas, y los docstrings que `help()` sabe leer. La diferencia entre un script que solo crece a base de copiar y pegar y uno construido con piezas que se pueden nombrar, probar y reutilizar.
 
 📂 [`27 - Funciones`](./27%20-%20Funciones)
@@ -278,9 +280,19 @@ El mismo cálculo de IVA copiado y pegado tres veces porque nadie lo metió en u
 
 ### 28 · Programación Orientada a Objetos (POO)
 
+<img src="./miniaturas/poo.jpg" alt="Programación Orientada a Objetos en Python" width="480">
+
 Un usuario gestionado con tres variables sueltas (`nombre1`, `email1`, `saldo1`) que se vuelve inmanejable en cuanto hay que repetirlo para el segundo usuario; un atributo de clase mutable (`items = []`) que, sin querer, hace que dos carritos distintos compartan la misma lista; una función que va preguntando `if type(usuario) is UsuarioAdmin` y se olvida de actualizar el día que aparece un tipo nuevo; un rol de usuario que debería poder cambiar en caliente y que la herencia no permite tocar una vez creado el objeto. Las **clases** son el molde que agrupa datos y comportamiento en una sola unidad, la base de la programación orientada a objetos. Aprenderás `class` e `__init__`, qué es `self` de verdad (`u.metodo(x)` no es más que `Clase.metodo(u, x)`), la trampa del atributo de clase mutable frente al atributo de instancia inicializado en `__init__`, la herencia con `super()` para reutilizar y extender un `Usuario` en un `UsuarioAdmin`, `isinstance()` e `issubclass()` para validar tipos en tiempo de ejecución, la convención de atributos "privados" (`_nombre` y el name mangling real de `__nombre`) frente a la privacidad real que Python no tiene, **polimorfismo**: el mismo `str(objeto)` produciendo un resultado distinto según el tipo real, sin ramas de `if`/`isinstance`, más el *duck typing* que permite esto incluso entre clases sin ningún ancestro común, **composición frente a herencia** ("tiene un" frente a "es un") para cuando la relación entre objetos puede cambiar en tiempo de ejecución, y `@classmethod`/`@staticmethod` como constructores alternativos (`Factura.desde_fila_csv(...)`) y funciones auxiliares agrupadas en la clase. La diferencia entre datos sueltos que hay que arrastrar a mano por cada función y objetos que saben cómo comportarse.
 
 📂 [`28 - POO`](./28%20-%20POO)
+
+---
+
+### 29 · Ficheros
+
+Un programa que genera logs valiosos y los pierde para siempre en cuanto se cierra el proceso, porque nunca salieron de una lista en memoria; un `close()` que se olvida y deja el buffer sin volcar a disco; un JSON con tildes que se lee distinto según el sistema operativo de quien ejecuta el script porque nadie especificó `encoding="utf-8"`. Los **ficheros** son cómo un programa hace que un dato sobreviva más allá de su propia ejecución. Aprenderás `open()` y sus modos (`'r'`, `'w'`, `'a'`) frente a `with open()` como forma correcta que garantiza el cierre incluso si algo lanza una excepción, las cuatro formas de leer (`read()`, `readline()`, `readlines()` y el `for line in fichero` que no carga el fichero entero en memoria), `pathlib.Path` como alternativa moderna a las rutas como strings —incluidas las novedades de Python 3.14, `Path.copy()` y `Path.move()`—, `csv.reader`/`csv.writer`/`csv.DictReader` para datos estructurados en filas y columnas, `json.dump()`/`json.load()` para configuración y datos anidados, y las tres excepciones que todo programador se encuentra tarde o temprano (`FileNotFoundError`, `PermissionError`, `IsADirectoryError`) con el patrón `try/except` que las cubre sin dejar huecos. La diferencia entre un dato que desaparece al cerrar el programa y uno que persiste, se comparte y se puede auditar después.
+
+📂 [`29 - Ficheros`](./29%20-%20Ficheros)
 
 ---
 
