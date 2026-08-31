@@ -296,6 +296,14 @@ Un programa que genera logs valiosos y los pierde para siempre en cuanto se cier
 
 ---
 
+### 30 · Try Except
+
+Una calculadora de descuentos que recibe `"gratis"` en vez de un número y termina con un traceback que nadie entiende; un `except Exception: pass` que hace desaparecer un fallo de importación sin dejar rastro; una conexión a base de datos que se queda abierta porque el `close()` nunca llega si la consulta falla. El **try/except** es cómo un programa deja de explotar ante lo inesperado y empieza a reaccionar. Aprenderás `try`/`except` con múltiples tipos de error y `as e` para acceder al mensaje, `else` como el sitio correcto para el código que solo debe correr si no hubo fallo, `finally` para el cierre que tiene que ejecutarse siempre (conexiones, ficheros), `raise` para lanzar excepciones propias y el patrón de *re-raise* tras loguear, las excepciones built-in más comunes (`ValueError`, `TypeError`, `KeyError`, `IndexError`, `FileNotFoundError`, `ZeroDivisionError`, `AttributeError`) y las buenas prácticas de qué capturar y qué no: nunca un `except Exception` a ciegas, ser específico y relanzar cuando el llamador necesita saber que algo falló. La diferencia entre un programa que se cae a la primera y uno que sabe encajar el golpe.
+
+📂 [`30 - Try Except`](./30%20-%20Try%20Except)
+
+---
+
 ## 🚀 Cómo empezar
 
 ```bash
