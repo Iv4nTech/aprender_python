@@ -290,6 +290,8 @@ Un usuario gestionado con tres variables sueltas (`nombre1`, `email1`, `saldo1`)
 
 ### 29 · Ficheros
 
+<img src="./miniaturas/ficheros.jpg" alt="Ficheros en Python" width="480">
+
 Un programa que genera logs valiosos y los pierde para siempre en cuanto se cierra el proceso, porque nunca salieron de una lista en memoria; un `close()` que se olvida y deja el buffer sin volcar a disco; un JSON con tildes que se lee distinto según el sistema operativo de quien ejecuta el script porque nadie especificó `encoding="utf-8"`. Los **ficheros** son cómo un programa hace que un dato sobreviva más allá de su propia ejecución. Aprenderás `open()` y sus modos (`'r'`, `'w'`, `'a'`) frente a `with open()` como forma correcta que garantiza el cierre incluso si algo lanza una excepción, las cuatro formas de leer (`read()`, `readline()`, `readlines()` y el `for line in fichero` que no carga el fichero entero en memoria), `pathlib.Path` como alternativa moderna a las rutas como strings —incluidas las novedades de Python 3.14, `Path.copy()` y `Path.move()`—, `csv.reader`/`csv.writer`/`csv.DictReader` para datos estructurados en filas y columnas, `json.dump()`/`json.load()` para configuración y datos anidados, y las tres excepciones que todo programador se encuentra tarde o temprano (`FileNotFoundError`, `PermissionError`, `IsADirectoryError`) con el patrón `try/except` que las cubre sin dejar huecos. La diferencia entre un dato que desaparece al cerrar el programa y uno que persiste, se comparte y se puede auditar después.
 
 📂 [`29 - Ficheros`](./29%20-%20Ficheros)
@@ -297,6 +299,8 @@ Un programa que genera logs valiosos y los pierde para siempre en cuanto se cier
 ---
 
 ### 30 · Try Except
+
+<img src="./miniaturas/tryexept.jpg" alt="Try Except en Python" width="480">
 
 Una calculadora de descuentos que recibe `"gratis"` en vez de un número y termina con un traceback que nadie entiende; un `except Exception: pass` que hace desaparecer un fallo de importación sin dejar rastro; una conexión a base de datos que se queda abierta porque el `close()` nunca llega si la consulta falla. El **try/except** es cómo un programa deja de explotar ante lo inesperado y empieza a reaccionar. Aprenderás `try`/`except` con múltiples tipos de error y `as e` para acceder al mensaje, `else` como el sitio correcto para el código que solo debe correr si no hubo fallo, `finally` para el cierre que tiene que ejecutarse siempre (conexiones, ficheros), `raise` para lanzar excepciones propias y el patrón de *re-raise* tras loguear, las excepciones built-in más comunes (`ValueError`, `TypeError`, `KeyError`, `IndexError`, `FileNotFoundError`, `ZeroDivisionError`, `AttributeError`) y las buenas prácticas de qué capturar y qué no: nunca un `except Exception` a ciegas, ser específico y relanzar cuando el llamador necesita saber que algo falló. La diferencia entre un programa que se cae a la primera y uno que sabe encajar el golpe.
 
